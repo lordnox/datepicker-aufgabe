@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>myDatepicker - Aufgabe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body ng-app="datepicker" ng-controller="mainController">
+    <h1>My Datepicker:</h1>
+    <div my-datepicker ng-model="myDate"></div>
+
+    <pre>{{myDate | json}}</pre>
+    <pre>{{myDate.format('DD.MM.YYYY HH:mm')}}</pre> <!-- Für den Fall das Moment genutzt wird -->
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/moment/moment.js"></script>
+
+    <script src="./script.js"></script>
+
+  </body>
+</html>
