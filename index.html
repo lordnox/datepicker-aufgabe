@@ -5,10 +5,18 @@
   </head>
   <body ng-app="datepicker" ng-controller="mainController">
     <h1>My Datepicker:</h1>
-    <div my-datepicker ng-model="myDate"></div>
 
-    <pre>{{myDate | json}}</pre>
-    <pre>{{myDate.format('DD.MM.YYYY HH:mm')}}</pre> <!-- Für den Fall das Moment genutzt wird -->
+    datepicker myDate: <div my-datepicker ng-model="myDate"></div>
+    datepicker inputDate: <div my-datepicker ng-model="inputDate"></div>
+
+    <div my-calendar></div>
+
+
+    input inputDate: <input type="text" ng-model="inputDate"/>
+
+    <pre>myDate: {{myDate | json}}</pre>
+    <pre>inputDate: {{inputDate | json}}</pre>
+    <pre>myDate format: {{myDate.format('DD.MM.YYYY HH:mm')}}</pre> <!-- Für den Fall das Moment genutzt wird -->
 
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/moment/moment.js"></script>
